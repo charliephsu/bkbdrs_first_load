@@ -21,6 +21,7 @@ def transform_data(infile_name):
             writer = csv.DictWriter(csv_outfile,fieldnames=outfile_header,
                                     lineterminator='\n',
                                     quotechar="'",
+                                    quoting=csv.QUOTE_ALL,
                                     escapechar='\\',
                                     doublequote="False")
             writer.writeheader()
